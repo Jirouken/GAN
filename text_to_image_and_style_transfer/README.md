@@ -1,0 +1,24 @@
+# text to image and style transfer
+
+文章から画像生成するモデルをPython3系列でも動くように変更
+
+編集元 https://github.com/paarthneekhara/text-to-image
+
+# Example 
+
+To generate an image drawn like an irasutoya illustration from your caption you run:
+```
+python main.py --title="This flower is a red rose" 
+```
+This will firstly generate your image through a GAN and then apply style transfer with the most related irasutoya image.
+The output image will be created in the main directory under the name ```result.jpg```.
+
+# Required files
+
+#### For Style Transfer
+  
+  The require file for Style Transfer is the .mat pretrained VGG9 file available [here](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-19.mat), please put this file in the 'style-transfer/pre_trained_model' directory.
+
+#### For Word2Vec
+  The require file for Word2Vec is the .bin.gz file available [here](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing), unzip it and put it in the 'word2vec/weights' directory.
+
